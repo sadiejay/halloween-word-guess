@@ -34,7 +34,7 @@ let remainingGuesses = 8;
 
 const getWord = async function () {
     const res = await fetch(
-        'https://gist.githubusercontent.com/skillcrush-curriculum/7061f1d4d3d5bfe47efbfbcfe42bf57e/raw/5ffc447694486e7dea686f34a6c085ae371b43fe/words.txt'
+        'https://raw.githubusercontent.com/sadiejay/spooky-words/main/words/objects.txt'
       );
     const data = await res.text();
     //   console.log(data);
@@ -51,7 +51,7 @@ const getWord = async function () {
         getWord();
       } else {
         wordIPSymbol(word);
-    // console.log(wordArray);
+    console.log(wordArray);
       }
 
 
@@ -69,7 +69,7 @@ const wordIPSymbol = word => {
       placeholderLetters.push('●');
     }
     wordIP.innerText = placeholderLetters.join('');
-    return
+
 }
 
 // Start the game
@@ -195,7 +195,7 @@ const startOver = function () {
 playAgain.addEventListener('click', function() {
     message.classList.remove('win');
     remainingGuesses = 8;
-    guessedLetter = [];
+    guessedLetters = [];
     guessRemainingSpan.innerText = `${remainingGuesses} guesses`;
     guessList.innerHTML = "";
     message.innerText = "";
