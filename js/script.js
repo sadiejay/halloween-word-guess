@@ -59,7 +59,8 @@ const getWord = async function () {
 
 
 // Display our symbols as placeholders for the chosen word's letters
-const wordIPSymbol = function (word) {
+// const wordIPSymbol = function (word) {
+const wordIPSymbol = word => {
     // Focus on letter input
     guessLetter.focus();
     const placeholderLetters = [];
@@ -68,6 +69,7 @@ const wordIPSymbol = function (word) {
       placeholderLetters.push('●');
     }
     wordIP.innerText = placeholderLetters.join('');
+    return
 }
 
 // Start the game
@@ -88,7 +90,7 @@ guessButton.addEventListener ('click', function (e) {
 });
 
 //  check users input
- const validateInput= function (input) {
+ const validateInput= (input) => {
     const acceptedLetter = /[a-zA-Z]/;
     if (input === '') {
         message.innerText = "Hey! You forgot your letter!"
