@@ -1,21 +1,30 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --black:rgb(11, 4, 20);
+  --d-purple:rgb(81, 40, 136);
+  --l-purple:rgb(115, 73, 172);
+  --l-orange:rgb(235, 97, 35);
+  --d-orange:rgb(218, 66, 0);
+
+}
 
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0;
-  /* font-family: "Open Sans", sans-serif; */
+  /* font-family: 'Source Sans Pro', sans-serif; */
+  font-family: 'Creepster', cursive;
   font-style: normal;
   font-size: 20px;
   line-height: 150%;
-  background-color: #dff6f6;
-  /* background-image: url("../img/bg.png"); */
+  background-color: var(--d-purple);
+  background-image: url("../img/bg.jpg");
   background-size: 800px;
   background-repeat: repeat;
-  color: #305050;
+  color:var(--d-orange);
 }
 
 .logo {
@@ -27,7 +36,7 @@ h1 {
   width: 100%;
   padding-top: 1em;
   margin: 0;
-  /* font-family: "Unlock", sans-serif; */
+  font-family: 'Creepster', cursive;
   font-style: normal;
   font-weight: normal;
   font-size: 44px;
@@ -36,8 +45,8 @@ h1 {
 
 .container {
   background: radial-gradient(50% 50% at 50% 50%,
-    rgba(167, 237, 237, 0.3) 0%,
-    rgba(156, 226, 226, 0) 100%);
+    rgba(115, 73, 172, 0.3) 0%,
+    rgba(81, 40, 136, 0) 100%);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -51,8 +60,9 @@ h1 {
 
 .highlight {
   padding: 0.25em;
-  background: #ffe2d6;
+  /* background: var(--l-orange); */
   font-size: 1em;
+  color: var(--black);
 }
 
 .underline {
@@ -62,7 +72,7 @@ h1 {
 
 .word-in-progress {
   letter-spacing: 15px;
-  color: #28bdbd;
+  color: var(--d-orange);
   font-size: 30px;
 }
 
@@ -99,13 +109,14 @@ input {
   font-size: 1.5em;
   margin-top: 0.5em;
   padding: 0.5em;
-  border: 3px solid #28bdbd;
+  border: 3px solid var(--l-orange);
+  background-color: var(--d-orange);
 }
 
 input:active,
 input:focus {
   outline: 0;
-  border: 4px solid #28bdbd;
+  border: 4px solid var(--d-purple);
 }
 
 .guess,
@@ -113,8 +124,8 @@ input:focus {
   padding: 1em 3em;
   border-radius: 50px;
   margin-top: 1em;
-  color: #fff;
-  background: #ff8d5c;
+  color: var(--d-purple);
+  background: var(--d-orange);
   font-size: 1em;
   align-self: center;
   outline: none;
@@ -131,15 +142,15 @@ input:focus {
   outline: 0;
   transform: scale(0.98);
   background: brightness(0.3);
-  color: white;
+  color: var(--l-orange);
 }
 
 /* animatied background */
 .win {
   padding: 0 1em;
-  background: linear-gradient(-45deg, #ff9d64, #f5620c);
+  background: linear-gradient(-45deg, var(--d-purple), var(--d-orange));
   background-size: 400% 400%;
-  animation: gradient 2s ease infinite;
+  animation: gradient 5s ease-in infinite;
 }
 
 @keyframes gradient {
