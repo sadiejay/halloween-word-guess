@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 :root {
@@ -15,15 +17,13 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0;
-  /* font-family: 'Source Sans Pro', sans-serif; */
+
   font-family: 'Creepster', cursive;
   font-style: normal;
   font-size: 20px;
   line-height: 150%;
-  background-color: var(--d-purple);
-  background-image: url("../img/bg.jpg");
-  background-size: 800px;
-  background-repeat: repeat;
+  /* background-color: var(--d-purple); */
+  /* background-repeat: repeat; */
   color:var(--d-orange);
 }
 
@@ -44,14 +44,33 @@ h1 {
 }
 
 .container {
-  background: radial-gradient(50% 50% at 50% 50%,
-    rgba(115, 73, 172, 0.3) 0%,
-    rgba(81, 40, 136, 0) 100%);
+  background: linear-gradient(-45deg, rgba(115, 73, 172, 0.6), rgba(81, 40, 136, 0.5));
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 90%;
+  width: 100%;
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../img/bg.png");
+  background-size: cover;
+  background-position: bottom center;
+}
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -999;
 }
 
 .hide {
@@ -131,6 +150,7 @@ input:focus {
   outline: none;
   border: 0;
   cursor: pointer;
+  position: relative;
 }
 
 .guess:active,
@@ -142,7 +162,7 @@ input:focus {
   outline: 0;
   transform: scale(0.98);
   background: brightness(0.3);
-  color: var(--l-orange);
+  color: var(--l-purple);
 }
 
 /* animatied background */
