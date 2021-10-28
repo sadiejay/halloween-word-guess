@@ -30,17 +30,31 @@ var word = 'magnolia';
 var guessedLetters = [];
 
 // number of guesses
-let remainingGuesses = 8;
+let remainingGuesses = 11;
 
-const getWord = async function () {
-    const res = await fetch(
-        'https://raw.githubusercontent.com/sadiejay/spooky-words/main/words/objects.txt'
-      );
-    const data = await res.text();
-    //   console.log(data);
+    // wrapping async code with function
+const getWord = async function () {    
+Promise.all([
+        (async() => {
+          let getObjects = await fetch('https://raw.githubusercontent.com/sadiejay/spooky-words/main/words/objects.txt');
+          let getObjectsData = await getObjects.text();
+      
+        //   collections data
+          let getCollections = await fetch('https://raw.githubusercontent.com/sadiejay/spooky-words/main/words/collections.txt');
+          let getCollectionsData = await getCollections.text();
+          
+        //   
+          let getPredicates = await fetch('https://raw.githubusercontent.com/sadiejay/spooky-words/main/words/predicates.txt');
+          let getPredicatesData = await getPredicates.text();
+          
+        //   
+          let getTeams = await fetch('https://raw.githubusercontent.com/sadiejay/spooky-words/main/words/teams.txt');
+          let getTeamsData = await getTeams.text();
 
-    const wordArray = data.split("\n");
+//! add all the words together in one list 
+    const data =getObjectsData.concat(getCollectionsData, getPredicatesData, getTeamsData)
 
+      const wordArray = data.split("\n");
     // select random word
 
     const randomIndex = Math.floor(Math.random() * wordArray.length);
@@ -54,9 +68,9 @@ const getWord = async function () {
     console.log(wordArray);
       }
 
-
-};
-
+    })(),
+]);
+}
 
 // Display our symbols as placeholders for the chosen word's letters
 // const wordIPSymbol = function (word) {
@@ -66,7 +80,7 @@ const wordIPSymbol = word => {
     const placeholderLetters = [];
     for (const letter of word) {
       console.log(letter);
-      placeholderLetters.push('●');
+      placeholderLetters.push('⚰️');
     }
     wordIP.innerText = placeholderLetters.join('');
 
@@ -140,7 +154,7 @@ guessButton.addEventListener ('click', function (e) {
         if (guessedLetters.includes(letter)) {
         revealWord.push(letter.toUpperCase());
         } else {
-        revealWord.push("●");
+        revealWord.push("⚰️");
         }
     }
     wordIP.innerText = revealWord.join("");
@@ -194,7 +208,7 @@ const startOver = function () {
     // play again / reset
 playAgain.addEventListener('click', function() {
     message.classList.remove('win');
-    remainingGuesses = 8;
+    remainingGuesses = 11;
     guessedLetters = [];
     guessRemainingSpan.innerText = `${remainingGuesses} guesses`;
     guessList.innerHTML = "";
