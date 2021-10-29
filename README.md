@@ -17,7 +17,7 @@ Words are derived from a curated spooky word list node package created in part b
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
+- [Acknowledgments-Attributions](#acknowledgments-attributions)
 
 ## Overview
 
@@ -36,8 +36,8 @@ Users should be able to:
 - Create some undead words
 
 ### Screenshot
+![halloween-word-graveyard screenshot](https://user-images.githubusercontent.com/19538219/139377291-1464ff88-abc3-4427-9b07-06d2bb5c49ef.jpg)
 
-![](./screenshot.jpg)
 
 ### Links
 
@@ -193,7 +193,7 @@ const revealWordEnding = [];
 - Github - [@sadiejay](https://www.twitter.com/yourusername)
 
 
-## Acknowledgments / Attributions
+## Acknowledgments-Attributions
 
 - [Spooky Words npm package](https://github.com/melissamcewen/spooky-words/tree/main)
 
