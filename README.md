@@ -65,11 +65,11 @@ Users should be able to:
 #### - Update the font styles
 
 
-#### - Configure the API using the github page
+#### - Configure an API using the github page
   - Go to spooky words github
   - get the url for the different word lists
-  - create API
-    - can there be more than 1 API?
+  - create API (maybe)
+    - can there be more than 1 async/await?
       - If yes:
         - create an array with the list
         - add the arraies together to get a big list
@@ -201,9 +201,9 @@ const revealWordEnding = [];
 
 - [Rain Background](https://www.youtube.com/watch?v=Q1GTZ6JSSFk)
 
-- [Virtual Coffee Member](https://virtualcoffee.io/) - Taiwo has piqued my interested in backend dev :eyes-emoji:
+- [Virtual Coffee Member Taiwo](https://virtualcoffee.io/) -  Piqued my interested in backend dev and creating API's from node packages :eyes-emoji:
 
-- [Skillcrush]() - Helping me build the skeleton of the project :)
+- [Skillcrush](https://skillcrush.com/) - Helping me build the skeleton of the project :)
 
 
 
