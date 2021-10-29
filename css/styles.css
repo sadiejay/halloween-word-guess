@@ -3,6 +3,7 @@
 *::after {
   box-sizing: border-box;
 }
+
 :root {
   --black:rgb(11, 4, 20);
   --d-purple:rgb(81, 40, 136);
@@ -53,6 +54,7 @@ h1 {
   align-items: center;
   width: 100%;
 }
+
 .hero {
   position: relative;
   overflow: hidden;
@@ -81,7 +83,6 @@ h1 {
 
 .highlight {
   padding: 0.25em;
-  /* background: var(--l-orange); */
   font-size: 1em;
   color: var(--black);
   font-size: 1.2em;
@@ -211,4 +212,12 @@ input:focus {
   100% {
     background-position: 0% 50%;
   }
+}
+
+@media screen and (prefers-reduced-motion: reduce) { 
+  .shake,
+  .shake-chunk{
+    animation: none;
+  }
+
 }
