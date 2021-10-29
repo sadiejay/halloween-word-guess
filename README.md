@@ -36,8 +36,7 @@ Users should be able to:
 - Create some undead words
 
 ### Screenshot
-![halloween-word-graveyard screenshot](https://user-images.githubusercontent.com/19538219/139377291-1464ff88-abc3-4427-9b07-06d2bb5c49ef.jpg)
-
+![halloween-word-graveyard](https://user-images.githubusercontent.com/19538219/139385223-58a136ac-796a-4d80-be7c-cc73d2957b96.jpg)
 
 ### Links
 
@@ -65,17 +64,17 @@ Users should be able to:
 #### - Update the font styles
 
 
-#### - Configure an API using the github page
+#### - Configure an ~API~ async function using the spooky-words github page
   - Go to spooky words github
   - get the url for the different word lists
   - create API (maybe)
-    - can there be more than 1 async/await?
-      - If yes:
-        - create an array with the list
-        - add the arraies together to get a big list
-        - use that pool
-      - if no:
-        - maybe different pages for each list?
+  - can there be more than 1 async/await?
+    - If yes:
+      - create an array with the list
+      - add the arraies together to get a big list
+      - use that pool
+    - if no:
+      - maybe different pages for each list?
 
 #### - Add second span class in index
   - Update the js to hide and add the span classes as needed
