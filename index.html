@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
   <link rel="manifest" href="img/site.webmanifest">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake.css" />
   <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Source+Sans+Pro&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/styles.css" />
@@ -19,7 +19,7 @@
 <body>
   <div class="container">
     <div class="hero">
-      <video class="video-bg" autoplay muted loop src="video/hero-video.mp4" type="video/mp4"></video>
+      <video class="video-bg" autoplay muted loop src="video/hero-video.mp4"></video>
 
       <h1>Halloween Word Graveyard</h1>
       <p class="message highlight"></p>
@@ -30,9 +30,9 @@
         <span class="span-remaining"> remaining.</span>
       </p>
       <ul class="guessed-letters"></ul>
-      <form action="" class="guess-form">
+      <form class="guess-form">
         <label class="label-form" for="letter">Type one letter. . . <em> if you dare</em>:</label>
-        <input type="text" name="letter" class="letter" />
+        <input type="text" name="letter" class="letter" id="letter" />
         <div class="form-element button-element">
           <button class="guess">Guess!</button>
         </div>
