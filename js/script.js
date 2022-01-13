@@ -135,7 +135,7 @@ const makeGuess = function (guess) {
         showGuessedLetters();
         updateWIP(guessedLetters);
     }
-    console.log(guessedLetters);
+    // console.log(guessedLetters);
 }
 
 //  function updates the page with users' guesses
